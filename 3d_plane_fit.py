@@ -65,9 +65,9 @@ for jj in range(n):
     residual[jj] = np.dot(normal, points[jj])
 std_residual = np.std(residual)
 
-print('\n---- Using Eigen ----- ')    
-print('normal vector: {}'.format(normal))
-print('std of residuals: {}'.format(std_residual))
+print('\n---- Method 1: Using Eigen ----- ')    
+print('normal vector: {}'.format(np.round(normal, 3)))
+print('std of residuals: {}'.format(np.round(std_residual, 3)))
 
 
 
@@ -80,9 +80,9 @@ Std_residual = min(b) / np.sqrt(n)
 Normal = c[np.argmin(b)]
 if Normal[2] < 0: Normal *= -1          # Ensure normal vector always points upward
 
-print('\n---- Using SVD ----- ')
-print('normal vector: {}'.format(Normal))
-print('std of residuals: {}'.format(Std_residual))
+print('\n---- Method 2: Using SVD ----- ')
+print('normal vector: {}'.format(np.round(Normal, 3)))
+print('std of residuals: {}'.format(np.round(Std_residual, 3)))
 
 
 
@@ -106,9 +106,9 @@ nv = nv / np.linalg.norm(nv)
 res = np.matmul(AA, XX) - L
 std_res = np.std(res)
 
-print('\n---- Using Least Squares Along Z axis ----- ')
-print('normal vector: {}'.format(nv))
-print('std of residuals: {}'.format(std_res))
+print('\n---- Method 3: Using Least Squares Along Z axis ----- ')
+print('normal vector: {}'.format(np.round(nv, 3)))
+print('std of residuals: {}'.format(np.round(std_res, 3)))
 
 ang = np.arccos(np.dot(normal, nv)) * 180 / np.pi
 print('\n----------------------------------')
@@ -172,6 +172,4 @@ vy = np.array([centroid[1], scale * nv[1] + centroid[1]])
 vz = np.array([centroid[2], scale * nv[2] + centroid[2]])
 ax.plot3D(vx, vy, vz, color='red', label='normal ls')
 
-
-#ax.legend(['Points', 'SVD Plane', 'LS Plane'])
 plt.show()

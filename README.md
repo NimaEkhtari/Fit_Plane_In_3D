@@ -12,7 +12,7 @@ This short repo shows by example 3 different methods to fit a plane to 3D points
 2. We calculate the singular value decomposition of the normalized coordinates matrix (n by 3).
 3. The singular vector corresponding to the smallest singular value is the normal vector to the best fit plane to our points.
 4. Similar to Eigen method, if the normal vector is not pointing up, we can multiply the normal by -1.
-5. The standard deviation of misclosure values (also known as standard deviation of the error) can be calculated by dividing the smallest singular value by square root of the number of points **σ<sub>r</sub> = min(sv) \over \sqrt{n}**
+5. The standard deviation of misclosure values (also known as standard deviation of the error) can be calculated by dividing the smallest singular value by square root of the number of points **$σ<sub>r</sub> = min(sv) \over \sqrt{n}$**
 
 ### Method 3- Fitting a 3D plane to 3D points using least squares fitting using a Z-axis constraint
 1. First we set up the equations using the Z-axis constraint.

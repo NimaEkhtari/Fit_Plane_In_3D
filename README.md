@@ -5,4 +5,4 @@ This short repo shows by example 3 different methods to fit a plane to 3D points
 
 
 ## Plots
-![plot_of_points_and_planes](../img/3d_plot.png)
+![3d_plot](./img/3d_plot.png)

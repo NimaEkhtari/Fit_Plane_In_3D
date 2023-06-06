@@ -5,20 +5,21 @@ This short repo shows by example 3 different methods to fit a plane to 3D points
 ## Results
 Because we create the 3D points randomly, every run of the code will be slightly different. Here are a sample set of results:
 
----- Using Eigen ----- 
-normal vector: [-0.2312203   0.32084969  0.918473  ]
-std of residuals: 0.11586616533827221
+---- Method 1: Using Eigen ----- 
+normal vector: [-0.212  0.384  0.898]
+std of residuals: 0.112
 
----- Using SVD ----- 
-normal vector: [-0.2312203   0.32084969  0.918473  ]
-std of residuals: 0.11586616533827221
+---- Method 2: Using SVD ----- 
+normal vector: [-0.212  0.384  0.898]
+std of residuals: 0.112
 
----- Using Least Squares Along Z axis ----- 
-normal vector: [-0.19844922  0.28130267  0.93887524]
-std of residuals: 0.12467737196103701
+---- Method 3: Using Least Squares Along Z axis ----- 
+normal vector: [-0.186  0.328  0.926]
+std of residuals: 0.123
 
 ----------------------------------
-angular difference between normal vectors calculated from SVD and least squares is 3.167 degrees
+angular difference between normal vectors calculated from SVD and least squares is **3.908** degrees
+
 
 ## Plots
 Now, let's plot everything:

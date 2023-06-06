@@ -20,7 +20,7 @@ This short repo shows by example 3 different methods to fit a plane to 3D points
 
 ## Results
 Because we create the 3D points randomly, every run of the code will be slightly different. Here are a sample set of results:
-
+```bash
 ---- Method 1: Using Eigen -----
 normal vector: **[-0.212,  0.384,  0.898]**
 std of residuals: **0.112**
@@ -35,7 +35,7 @@ std of residuals: **0.123**
 
 ----------------------------------
 angular difference between normal vectors calculated from SVD and least squares is **3.908** degrees
-
+```
 
 # Plots
 Now, let's plot all the results:

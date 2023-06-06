@@ -34,7 +34,7 @@ normal vector: [-0.186,  0.328,  0.926]
 std of residuals: 0.123
 
 ----------------------------------
-angular difference between normal vectors calculated from SVD and least squares is **3.908** degrees
+angular difference between normal vectors calculated from SVD and least squares is 3.908 degrees
 ```
 
 # Plots

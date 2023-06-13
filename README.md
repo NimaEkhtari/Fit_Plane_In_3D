@@ -8,6 +8,7 @@ This short repo shows by example 3 different methods to fit a plane to 3D points
 4. In most applications (such as aerial surveying), the planes that we are interested in are pointed away from the surface. Therefore, if the Z value of the normal vector is not positive, we can invert the normal vector by multiplying the vector by -1.
 
 ### Method 2- Singular Value Decomposition (SVD)
+For further reading and prrof, refer to [1]
 1. Similar to Eigen method, we calculate the normalized point coordinates (centroid removed coordinates).
 2. We calculate the singular value decomposition of the normalized coordinates matrix (n by 3).
 3. The singular vector corresponding to the smallest singular value is the normal vector to the best fit plane to our points.
@@ -49,3 +50,6 @@ Now, let's plot all the results:
 You can see that there is a clear distinction between the two planes, proving that the least squares adjustment plane fitting with Z-axis constraint is not the best solution and does not quite achieve similar results to SVD or Eigen approaches. In this example, the angular difference between the normal to SVD plane and the normal to least squares plane is about 3.16 degrees.
 
 ![3d_plot](./img/3d_plot.png)
+
+# References
+[1] IngeS¨oderkvist https://www.ltu.se/cms_fs/1.51590!/svd-fitting.pdf

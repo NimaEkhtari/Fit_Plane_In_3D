@@ -16,7 +16,8 @@ This short repo shows by example 3 different methods to fit a plane to 3D points
 
 ### Method 3- Fitting a 3D plane to 3D points using least squares fitting using a Z-axis constraint
 1. First we set up the equations using the Z-axis constraint.
-2. 
+2. Next we solve the least saures solution for the equations (add equations in the next update).
+3. To be completed!
 
 ## Results
 Because we create the 3D points randomly, every run of the code will be slightly different. Here are a sample set of results:
